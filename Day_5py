@@ -1,0 +1,25 @@
+def my_discount ():
+    price = float(input("Enter the price: "))
+    discount = float(input("Enter the discount: "))
+    new_price = price - (price * discount/100)
+    return new_price
+
+print(my_discount())
+
+
+#Extra question 
+
+def Student_sex(lst):
+    male = 0 
+    female = 0 
+    for j in lst:
+        if j.lower() == "male":
+            male = male + 1
+        elif j.lower() == "female":
+            female = female + 1
+        else:
+            print("Invalid input")
+    return [("Male : ",male),("Female : ",female)]
+
+l1 = ["male","femaLe","Male","Female","male","female","FEMALE"]
+print(Student_sex(l1))
