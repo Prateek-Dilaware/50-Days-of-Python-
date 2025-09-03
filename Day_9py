@@ -1,0 +1,25 @@
+def odd_num(s):
+    lst = [x for x in s if int(x)%2 == 1]
+    return f"The maximum odd number is {max(lst)}"
+
+print(odd_num("125598871"))
+
+
+# extra question 
+def zero_last(lst):
+    if 0 in lst:
+        count = 0
+        for j in lst:
+            if j == 0:
+                count += 1
+                lst.remove(0)
+                
+        lst.sort()    
+        for k in range(count):
+            lst.append(0)
+        
+        return lst
+    else :
+        lst.sort()
+        return lst
+print(zero_last([0,1,2,3,4,0,5,6,7,8,9]))
